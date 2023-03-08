@@ -1,0 +1,132 @@
+header{
+    background-color: #FFFBF3;
+    background-image: url(../media/Group\ 33474.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 100% 150px;
+    .contain{
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 0;
+            margin-bottom: 50px;
+            &__checkbox{
+                display: none;
+            }
+            &__links{
+                ul{
+                    display: flex;
+                    gap: 24px;
+                    font-weight: 600;
+                    li{
+                        a{
+                            color: inherit;
+                            text-decoration: none;
+                        }
+                    }
+                    .active{
+                        color: #FCC647;
+                        border-bottom: 2px solid #FCC647;
+                    }
+                    li:hover{
+                        color: #FCC647;
+                        border-bottom: 2px solid #FCC647;
+                    }
+                }
+            }
+            &__label{
+                display: none;
+            }
+            &__logo{
+                width: 140px;
+            }
+        }
+        .showcase{
+            padding: 10px 0 120px;
+            .left{
+                width: 50%;
+                &__span{
+                    color: #FCC647;
+                    background-color: #FFF2D5;
+                    padding: 4px 10px;
+                }
+                &__h2{
+                    font-weight: 700;
+                    margin: 20px 0;
+                    span{
+                        color: #FCC647;
+                    }
+                }
+                &__p{
+                    color: grey;
+                    font-size: 14px;
+                    margin-bottom: 30px;
+                }
+                &__button{
+                    color: white;
+                    background-color: #FCC647;
+                    border: 1px solid #FCC647;
+                    padding: 4px 10px;
+                    border-radius: 14px;
+                }
+                &__button:hover{
+                    color: #FCC647;
+                    background-color: inherit;
+                    transition-duration: .3s;
+                    transition-timing-function: linear;
+                    border: 1px solid #FCC647;
+                }
+                &__bottomSpan{
+                    color: grey;
+                    font-size: 14px;
+                    margin-left: 20px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:700px){
+    header{
+        background-image: linear-gradient(to right, #ffffffc1, #ffffffc1), url(../media/Group\ 33474.png);
+        background-size: 100%;
+        background-position: right center;
+        .contain{
+            .navbar{
+                &__links{
+                    display: none;
+                }
+                &__label{
+                    display: block;
+                    color: #FCC647;
+                }
+                &__checkbox:checked ~ nav{
+                    display: block;
+                    ul{
+                        position: absolute;
+                        top: 70px;
+                        right: 0;
+                        display: block;
+                        background-color: #FFF2D5;
+                        padding-left: 0;
+                        padding: 10px 20px;
+                    }
+                }
+            }
+            .showcase{
+                margin-top: -50px;
+                .left{
+                    width: 90%;
+                    margin: 30px auto 10px;
+                    span, p{
+                        color: black;
+                    }
+                    &__span{
+                        color: #FCC647 !important;
+                    }
+                }
+            }
+        }
+    }
+}
